@@ -1,0 +1,11 @@
+name: Calculator
+version: '${project.version}'
+main: de.theredend2000.calculator.Main
+api-version: 1.19
+commands:
+  calculator:
+    description: Open the Calculator
+    aliases:
+      - c
+      - calc
+      - calculate

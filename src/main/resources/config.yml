@@ -1,0 +1,11 @@
+#Settings
+Settings:
+  NeedCalculatorMenuOpenPermission: true
+
+#Permissions
+Permissions:
+  CalculatorMenuOpenPermission: calculator.open
+
+#Messages
+Messages:
+  NoPermissionMessage: '&cYou dont have the &6%permission% &cpermission to use the command'

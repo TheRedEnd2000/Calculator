@@ -9,7 +9,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 public class MenuListener implements Listener {
 
     private Main plugin;
-    private int loesung;
+    private String ls;
 
     public MenuListener(Main plugin){
         this.plugin = plugin;
@@ -40,10 +40,15 @@ public class MenuListener implements Listener {
                             plugin.getMenuManager().createCalculatorInventory(player);
                             break;
                         case "=":
-                            if(loesung == 0){
-                                player.sendMessage("null");
-                            }
-                            player.sendMessage(String.valueOf(loesung));
+
+                                String rechnung = plugin.getMenuManager().rechnung;
+                                for(int i = 0; i < rechnung.length(); i++){
+                                    if (Character.isDigit(rechnung.charAt(i))){
+                                        ls = ls+String.valueOf(rechnung.charAt(i));
+
+                                    }
+                                }
+                            player.sendMessage(ls);
                             plugin.getMenuManager().createCalculatorInventory(player);
                             break;
                     }
